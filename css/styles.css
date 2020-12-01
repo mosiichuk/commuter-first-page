@@ -1,0 +1,274 @@
+/* Resets */
+p,
+h1,
+h2 {
+    margin: 0;
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a,
+a:focus,
+a:hover {
+    text-decoration: none;
+}
+
+/* Common */
+html {
+    font-size: 20px;
+}
+
+body {
+    font-family: 'Sarabun', sans-serif;
+    color: #FFFFFF;
+    font-weight: 500;
+}
+
+.container {
+    width: 95%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-size: 7.7rem;
+    color: #FF5500;
+}
+
+h2 {
+    font-size: 7.5rem;
+    text-transform: uppercase;
+}
+
+.main {
+    overflow-x: hidden;
+    height: 100vh;
+    padding-top: 3vh;
+    background-color: #040404;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.main-header {
+    position: absolute;
+    z-index: 2;
+    left: 3%;
+    top: 3%;
+    transition: visibility .0s, opacity 0.5s ease-in-out;
+    visibility: visible;
+}
+
+.sub-header {
+    position: absolute;
+    z-index: 2;
+    bottom: 15%;
+    left: 3%;
+    transition: visibility .0s, opacity 0.5s ease-in-out;
+    visibility: visible;
+}
+
+.main-row {
+    position: relative;
+    z-index: 1;
+}
+
+.hide {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* menu */
+.navbar {
+    display: flex;
+}
+
+.logo {
+    margin-right: 15%;
+}
+
+#menuToggle {
+    margin-left: auto;
+    position: relative;
+}
+
+#menuToggle input {
+    display: block;
+    width: 42px;
+    height: 32px;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 7;
+}
+
+.menu__link {
+    color: #FFF;
+}
+
+.menu__toggler {
+    width: 32px;
+    height: 4px;
+    margin-bottom: 5px;
+    background-color: #FFFFFF;
+    border-radius: 3px;
+    position: relative;
+    z-index: 6;
+    transform-origin: 4px 0px;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), opacity 0.55s ease;
+}
+
+#menuToggle input:checked~.menu__toggler {
+    opacity: 1;
+    transform: rotate(45deg) translate(3px, 0px);
+    background: #FFFFFF;
+}
+
+#menuToggle input:checked~.menu__toggler:nth-last-child(2) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menuToggle input:checked~.menu__toggler:nth-last-child(1) {
+    transform: rotate(-45deg) translate(-1px, 0px);
+}
+
+.menu {
+    box-sizing: border-box;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #FFF;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100vh;
+    padding: 150px 0px 0px 50px;
+    background: #FF5500;
+    z-index: 5;
+    transform-origin: 0% 0%;
+    transform: translate(100%, 0);
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+}
+
+.menu-active {
+    transform: none;
+}
+
+.menu-item {
+    margin-bottom: 10px;
+}
+
+/* projects and slider */
+.projects {
+    display: flex;
+    padding-top: 12vh;
+}
+
+.project {
+    display: inline-block;
+    transition: transform .5s ease-in-out;
+    cursor: pointer;
+}
+
+.project__thumbnail {
+    display: inline-block;
+    position: relative;
+    margin-bottom: 5%;
+}
+
+.project__info {
+    display: flex;
+}
+
+.project.swiper-slide-active>.project__thumbnail:before {
+    opacity: 1;
+}
+
+.project__thumbnail:before {
+    line-height: 0;
+    content: '*';
+    position: absolute;
+    color: #FF5500;
+    font-size: 7.7rem;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity .5s ease-in-out;
+    opacity: 0;
+}
+
+.project__thumbnail p {
+    font-size: 1.5rem;
+    color: #FFFFFF;
+    opacity: 0.7;
+    position: absolute;
+    bottom: 3%;
+    right: 3%;
+}
+
+.project__thumbnail img {
+    width: 100%;
+    height: auto;
+}
+
+.project:hover {
+    transform: scale(1.05);
+}
+
+.project.swiper-slide-active>.project__info {
+    visibility: visible;
+    opacity: 1;
+}
+
+.project__info {
+    transition: visibility .0s, opacity 0.5s ease-in-out;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.info {
+    text-transform: uppercase;
+    width: 100%;
+}
+
+.info__header {
+    margin-bottom: 10px;
+    color: #FF5500;
+}
+
+.swiper-container {
+    overflow: visible;
+}
+
+.swiper-slide {
+    max-width: 830px;
+    width: 100%;
+}
+
+.arrow-down {
+    position: absolute;
+    bottom: 0;
+    left: 3%;
+    z-index: 10;
+}
+
+@media screen and (max-height: 780px) {
+    .swiper-slide {
+        max-width: 750px;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    html {
+        font-size: 15px;
+    }
+}

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commuter</title>
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+    <section id="main" class="main">
+        <div class="container">
+            <nav class="navbar">
+                <img src="./img/logo.svg" class="logo" alt="logo">
+                <p class="contact-number">+44 7949 3040 204</p>
+
+                <div id="menuToggle">
+                    <input type="checkbox" class="menu__checkbox" />
+                    <div class="menu__toggler"></div>
+                    <div class="menu__toggler"></div>
+                    <div class="menu__toggler"></div>
+                </div>
+
+                <ul class="menu d-flex flex-column flex-md-row justify-content-md-around">
+                    <li class="menu-item"><a href="#" class="menu__link">Main</a>
+                    </li>
+                    <li class="menu-item"><a href="#" class="menu__link">About us</a>
+                    <li class="menu-item"><a href="#" class="menu__link">Gallery</a>
+                    </li>
+                    <li class="menu-item"><a href="#" class="menu__link">Prices</a>
+                    </li>
+                    <li class="menu-item"><a href="#" class="menu__link">Contacts</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="main-row">
+                <h1 class="main-header">Commuter</h1>
+                <h2 class="sub-header">Films</h2>
+
+                <img src="./img/arrow.svg" alt="arrow-down" class="arrow-down">
+                <div class="swiper-container" id="catalog-mobile">
+                    <div class="swiper-wrapper projects">
+                        <div class="project swiper-slide">
+                            <div class="project__thumbnail project-active">
+                                <img src="./img/main.png" alt="Person">
+                                <p class="project__index">01</p>
+                            </div>
+
+                            <div class="project__info">
+                                <div class="info">
+                                    <p class="info__header">
+                                        Industry
+                                    </p>
+                                    <p class="info__desc">
+                                        Film production
+                                    </p>
+                                </div>
+
+                                <div class="info">
+                                    <p class="info__header">
+                                        Project
+                                    </p>
+                                    <p class="info__desc">
+                                        A band and website
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project swiper-slide">
+                            <div class="project__thumbnail">
+                                <img src="./img/main-2.png" alt="Person">
+                                <p class="project__index">02</p>
+                            </div>
+
+                            <div class="project__info">
+                                <div class="info">
+                                    <p class="info__header">
+                                        Industry
+                                    </p>
+                                    <p class="info__desc">
+                                        Film production
+                                    </p>
+                                </div>
+
+                                <div class="info">
+                                    <p class="info__header">
+                                        Project
+                                    </p>
+                                    <p class="info__desc">
+                                        A band and website
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project swiper-slide">
+                            <div class="project__thumbnail">
+                                <img src="./img/main-2.png" alt="Person">
+                                <p class="project__index">03</p>
+                            </div>
+
+                            <div class="project__info">
+                                <div class="info">
+                                    <p class="info__header">
+                                        Industry
+                                    </p>
+                                    <p class="info__desc">
+                                        Film production
+                                    </p>
+                                </div>
+
+                                <div class="info">
+                                    <p class="info__header">
+                                        Project
+                                    </p>
+                                    <p class="info__desc">
+                                        A band and website
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
